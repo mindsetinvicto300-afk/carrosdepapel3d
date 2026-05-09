@@ -29,7 +29,7 @@ export function Benefits() {
       title: "Diversão para Todas as Idades",
       description: "Seu filho fica preso no celular por horas? A montagem de moldes de carro 3D instigam a criatividade e raciocínio, além de ser muito divertida.",
       icon: Sparkles,
-      image: "/images/benefit-diversao.jpg",
+      image: "/images/benefit-fun.jpg",
     }
   ];
 
