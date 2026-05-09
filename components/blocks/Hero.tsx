@@ -36,7 +36,7 @@ export function Hero() {
   return (
     <section className="relative w-full bg-background overflow-hidden">
       {/* Urgency Bar */}
-      <div className="w-full bg-destructive text-destructive-foreground py-2 px-4 text-center text-sm font-bold flex items-center justify-center gap-2 z-20 relative flex-wrap">
+      <div className="w-full bg-destructive text-white py-2 px-4 text-center text-sm font-bold flex items-center justify-center gap-2 z-20 relative flex-wrap">
         <Timer className="w-4 h-4 animate-pulse shrink-0" />
         <span>OPORTUNIDADE ÚNICA: Promoção válida somente até hoje, {today}</span>
         <span className="font-mono tracking-widest bg-black/20 px-2 py-0.5 rounded">
