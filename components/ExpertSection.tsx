@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Instagram, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const expert = {
   name: "Marcelo Andrade",
@@ -79,7 +79,11 @@ export function ExpertSection() {
                 aria-label="Visitar perfil de Marcelo Andrade no Instagram (abre em nova aba)"
                 className="flex items-center gap-1.5 text-[#FF6B00] font-medium hover:text-[#FF6B00]/80 transition-colors"
               >
-                <Instagram className="w-4 h-4" strokeWidth={2} />
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
                 {expert.handle}
               </a>
               <span className="hidden sm:inline text-white/20">·</span>
