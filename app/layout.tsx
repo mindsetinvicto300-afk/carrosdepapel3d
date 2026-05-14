@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans">
         {children}
         <Script id="utmify-pixel" strategy="afterInteractive">{`
-          window.pixelId = "69ff6af63b0ad6d6e030271e";
+          window.pixelId = "6a05118db209fc11a88e9625";
           var a = document.createElement("script");
           a.setAttribute("async", "");
           a.setAttribute("defer", "");
