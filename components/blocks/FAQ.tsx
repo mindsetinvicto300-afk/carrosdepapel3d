@@ -1,6 +1,7 @@
 'use client';
 
 import { m as motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 import {
   Accordion,
   AccordionContent,
@@ -74,6 +75,23 @@ export function FAQ() {
               </AccordionItem>
             ))}
           </Accordion>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="text-center mt-14"
+        >
+          <p className="text-muted-foreground mb-5 text-base">Pronto para começar sua coleção?</p>
+          <Button
+            size="lg"
+            className="h-14 px-10 text-base font-extrabold uppercase tracking-widest bg-gradient-to-r from-primary to-secondary text-primary-foreground border-none hover:scale-105 transition-transform shadow-lg"
+            onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            VER OS PLANOS
+          </Button>
         </motion.div>
       </div>
     </section>

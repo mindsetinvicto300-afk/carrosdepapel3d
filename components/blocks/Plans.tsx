@@ -228,37 +228,35 @@ export function Plans() {
                   </div>
                 )}
 
-                {/* Glow ring for popular plan */}
-                {plan.popular && (
-                  <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-primary/60 via-primary/20 to-transparent blur-sm pointer-events-none" />
-                )}
-
                 <Card className={`relative h-full flex flex-col border-2 overflow-hidden ${
                   plan.popular
-                    ? 'border-primary shadow-2xl shadow-primary/20 bg-gradient-to-b from-primary/5 to-background md:scale-105'
+                    ? 'border-primary shadow-xl bg-black md:scale-105'
                     : 'border-border shadow-lg'
                 }`}>
 
                   {/* Plan mockup image */}
-                  <div className="relative w-full aspect-[4/3] bg-muted overflow-hidden">
+                  <div className="relative w-full aspect-[4/3] bg-black overflow-hidden">
                     <Image
                       src={plan.image}
                       alt={`Mockup do plano ${plan.name}`}
                       fill
-                      className="object-contain p-4"
+                      className="object-contain"
                       sizes="(max-width: 768px) 100vw, 50vw"
                       loading="lazy"
                     />
                   </div>
 
                   <CardHeader className="text-center pb-4 pt-6">
-                    <CardTitle className="text-2xl font-bold mb-1">{plan.name}</CardTitle>
-                    <p className="text-muted-foreground text-sm">{plan.description}</p>
+                    <CardTitle className={`text-2xl font-bold mb-1 ${plan.popular ? 'text-white' : ''}`}>
+                      {plan.name}
+                    </CardTitle>
+                    <p className={`text-sm ${plan.popular ? 'text-white/60' : 'text-muted-foreground'}`}>
+                      {plan.description}
+                    </p>
 
-                    {/* Value anchoring */}
                     {plan.originalPrice && (
                       <div className="mt-3 flex flex-col items-center gap-1.5">
-                        <span className="text-sm text-muted-foreground line-through">
+                        <span className={`text-sm line-through ${plan.popular ? 'text-white/40' : 'text-muted-foreground'}`}>
                           De R$ {plan.originalPrice}
                         </span>
                         <span className="text-xs font-bold text-green-500 bg-green-500/10 px-3 py-1 rounded-full">
@@ -268,13 +266,13 @@ export function Plans() {
                     )}
 
                     <div className="mt-4 flex items-baseline justify-center gap-1">
-                      <span className="text-xl font-bold text-muted-foreground">R$</span>
+                      <span className={`text-xl font-bold ${plan.popular ? 'text-white/50' : 'text-muted-foreground'}`}>R$</span>
                       <span className={`font-extrabold tracking-tighter ${plan.popular ? 'text-6xl text-primary' : 'text-5xl'}`}>
                         {plan.price}
                       </span>
                     </div>
                     {plan.popular && (
-                      <p className="text-xs text-muted-foreground mt-1">pagamento único — acesso vitalício</p>
+                      <p className="text-xs text-white/40 mt-1">pagamento único — acesso vitalício</p>
                     )}
                   </CardHeader>
 
@@ -285,7 +283,7 @@ export function Plans() {
                           <div className={`rounded-full p-1 shrink-0 ${plan.popular ? 'bg-primary/20 text-primary' : 'bg-muted text-muted-foreground'}`}>
                             <Check className="w-4 h-4" />
                           </div>
-                          <span className={`text-sm font-medium ${plan.popular ? 'text-foreground' : 'text-muted-foreground'}`}>
+                          <span className={`text-sm font-medium ${plan.popular ? 'text-white' : 'text-muted-foreground'}`}>
                             {feature}
                           </span>
                         </li>
@@ -297,14 +295,14 @@ export function Plans() {
                     <Button
                       className={`w-full h-14 text-base font-extrabold uppercase tracking-widest border-none transition-all ${
                         plan.popular
-                          ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-lg hover:scale-105 hover:shadow-primary/40'
+                          ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-lg hover:scale-105'
                           : 'bg-muted hover:bg-muted/80 text-foreground shadow-sm'
                       }`}
                       onClick={() => handlePlanClick(plan)}
                     >
                       {plan.buttonText}
                     </Button>
-                    <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+                    <div className={`flex items-center justify-center gap-2 text-xs ${plan.popular ? 'text-white/40' : 'text-muted-foreground'}`}>
                       <ShieldCheck className="w-4 h-4 text-green-500" />
                       <span>Pagamento 100% Seguro</span>
                     </div>

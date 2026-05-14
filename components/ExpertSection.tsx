@@ -2,7 +2,6 @@
 
 import { m as motion } from 'framer-motion';
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
 
 const expert = {
   name: "Marcelo Andrade",
@@ -99,20 +98,6 @@ export function ExpertSection() {
             <p className="text-base leading-relaxed max-w-prose text-[#B8B8B8] mx-auto lg:mx-0">
               {expert.bio}
             </p>
-
-            {/* CTA */}
-            <div className="flex justify-center lg:justify-start">
-              <a
-                href={expert.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar perfil de Marcelo Andrade no Instagram (abre em nova aba)"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#FF6B00] hover:text-white transition-colors group"
-              >
-                Ver no Instagram
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
 
           </div>
         </motion.div>

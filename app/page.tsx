@@ -1,5 +1,7 @@
 import { MotionProvider } from '@/components/motion-provider';
+import { StickyBar } from '@/components/StickyBar';
 import { Hero } from '@/components/blocks/Hero';
+import { Pain } from '@/components/blocks/Pain';
 import { Benefits } from '@/components/blocks/Benefits';
 import { ShowcaseCarousel } from '@/components/ShowcaseCarousel';
 import { SocialProof } from '@/components/blocks/SocialProof';
@@ -14,8 +16,10 @@ import { Footer } from '@/components/blocks/Footer';
 export default function Home() {
   return (
     <MotionProvider>
+      <StickyBar />
       <main className="flex min-h-screen flex-col items-center justify-between w-full overflow-hidden bg-background">
         <Hero />
+        <Pain />
         <Benefits />
         <ShowcaseCarousel />
         <SocialProof />
