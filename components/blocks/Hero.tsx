@@ -19,9 +19,10 @@ function useCountdown() {
     };
   };
 
-  const [time, setTime] = useState(getTimeLeft);
+  const [time, setTime] = useState({ h: '00', m: '00', s: '00' });
 
   useEffect(() => {
+    setTime(getTimeLeft());
     const id = setInterval(() => setTime(getTimeLeft()), 1000);
     return () => clearInterval(id);
   }, []);
@@ -30,8 +31,12 @@ function useCountdown() {
 }
 
 export function Hero() {
-  const today = new Date().toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+  const [today, setToday] = useState('');
   const { h, m, s } = useCountdown();
+
+  useEffect(() => {
+    setToday(new Date().toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' }));
+  }, []);
 
   return (
     <section className="relative w-full bg-background overflow-hidden">
