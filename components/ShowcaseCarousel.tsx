@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m as motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Car } from 'lucide-react';
 import { showcaseCars } from '@/data/showcase-cars';
 
@@ -133,7 +133,7 @@ export function ShowcaseCarousel() {
           <button
             onClick={goPrev}
             aria-label="Carro anterior"
-            className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 bg-black/20 hover:bg-black/60 flex items-center justify-center text-white transition-all duration-200
+            className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center text-white transition-all duration-200
               opacity-100 md:opacity-0 md:group-hover:opacity-100
               focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
           >
@@ -144,7 +144,7 @@ export function ShowcaseCarousel() {
           <button
             onClick={goNext}
             aria-label="Próximo carro"
-            className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 bg-black/20 hover:bg-black/60 flex items-center justify-center text-white transition-all duration-200
+            className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 flex items-center justify-center text-white transition-all duration-200
               opacity-100 md:opacity-0 md:group-hover:opacity-100
               focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
           >
@@ -152,7 +152,7 @@ export function ShowcaseCarousel() {
           </button>
 
           {/* Counter badge */}
-          <div className="absolute top-3 right-3 z-20 bg-black/50 bg-black/20 text-white text-xs font-semibold px-2.5 py-1 rounded-full pointer-events-none">
+          <div className="absolute top-3 right-3 z-20 bg-black/50 text-white text-xs font-semibold px-2.5 py-1 rounded-full pointer-events-none">
             {activeIndex + 1} / {showcaseCars.length}
           </div>
         </motion.div>

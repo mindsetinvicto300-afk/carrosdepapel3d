@@ -1,3 +1,4 @@
+import { MotionProvider } from '@/components/motion-provider';
 import { Hero } from '@/components/blocks/Hero';
 import { Benefits } from '@/components/blocks/Benefits';
 import { ShowcaseCarousel } from '@/components/ShowcaseCarousel';
@@ -12,18 +13,20 @@ import { Footer } from '@/components/blocks/Footer';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between w-full overflow-hidden bg-background">
-      <Hero />
-      <Benefits />
-      <ShowcaseCarousel />
-      <SocialProof />
-      <Requirements />
-      <Bonuses />
-      <Plans />
-      <ExpertSection />
-      <Guarantee />
-      <FAQ />
-      <Footer />
-    </main>
+    <MotionProvider>
+      <main className="flex min-h-screen flex-col items-center justify-between w-full overflow-hidden bg-background">
+        <Hero />
+        <Benefits />
+        <ShowcaseCarousel />
+        <SocialProof />
+        <Requirements />
+        <Bonuses />
+        <Plans />
+        <ExpertSection />
+        <Guarantee />
+        <FAQ />
+        <Footer />
+      </main>
+    </MotionProvider>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { m as motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Timer, ArrowRight, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
