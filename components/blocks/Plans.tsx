@@ -8,9 +8,9 @@ import { Check, ShieldCheck, Flame, X, Zap } from 'lucide-react';
 import Image from 'next/image';
 
 // ─── Checkout links (fill in after creating products) ───────────────────────
-const CHECKOUT_BASICO   = '';   // TODO: colar link do checkout Básico
-const CHECKOUT_COMPLETO = '';   // TODO: colar link do checkout Completo
-const CHECKOUT_DOWNSELL = '';   // TODO: colar link do checkout Downsell (R$22,90)
+const CHECKOUT_BASICO   = 'https://pay.wiapy.com/MvhdDhRp-9';
+const CHECKOUT_COMPLETO = 'https://pay.wiapy.com/MfqkQqvEgS';
+const CHECKOUT_DOWNSELL = 'https://pay.wiapy.com/YSMmPeogIZ';
 // ────────────────────────────────────────────────────────────────────────────
 
 const plans = [
